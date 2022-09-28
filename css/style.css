@@ -17,8 +17,8 @@ body{
 main{
   width: 100vw;
   height: calc(100vh - 90px);
-  z-index: 2;
 }
+
 
 /* FINE MAIN  */
 
@@ -29,13 +29,10 @@ main{
   display: flex;
   flex-direction: column;
   padding: 20px 10px 5px 10px;
+  justify-content: space-between;
+  
 }
 
-.con-aside{
-  width: 97%;
-  height: 90%;
-  margin: 0 auto;
-}
 
 .logo{
   width: 75%;
@@ -93,7 +90,6 @@ main{
 }
 
 .end{
-  margin-top: 160px;
   border-bottom: 1px solid #ffffff;
   color: lightgray;
   cursor: pointer;
@@ -110,9 +106,10 @@ main{
   color: #ffff;
 }
 
-.after-end span{
+.after-end span,i{
 font-size: 0.8rem;
 color: lightgray;
+cursor: pointer;
 }
 
 /* FINE ASIDE  */
@@ -215,6 +212,8 @@ header a{
 
 }
 
+
+
 .co-img h3{
 color: #ffffff;
 }
@@ -294,7 +293,9 @@ footer{
 
 }
 
-@media screen and (max-width: 560px){
+@media screen and (max-width: 600px){
+
+ 
 
   header a{
     padding: 10px 25px; 
@@ -311,14 +312,9 @@ footer{
     width: 50px;
     padding: 0;
     display: flex;
-  }
-
-  .con-aside{
-    width: 100%;
-    height: 70%;
-    margin: 0 auto;
     text-align: center;
   }
+
 
   .logo {display: none;}
  
@@ -329,7 +325,7 @@ footer{
     text-align: center;
   }
   
-  .aside .con-aside h3{
+  .aside  h3{
     display: none;
   }
 
