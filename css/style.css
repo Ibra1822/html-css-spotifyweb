@@ -32,9 +32,20 @@ main{
   background-color: #000000;
   display: flex;
   flex-direction: column;
-  padding: 20px 10px 5px 10px;
+  padding: 20px 10px 5px 0px;
   justify-content: space-between;
   
+}
+
+.top{
+  height: 50%;
+  padding-left: 5px;
+}
+
+.down{
+  padding-left: 10px;
+  height: 40px;
+  font-size: 13px;
 }
 
 
@@ -48,7 +59,8 @@ main{
 }
 
 .effect {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  border-left: 2px solid transparent ;
 }
 
 .effect .icon{
@@ -67,17 +79,58 @@ main{
   text-decoration: none;
 }
 
+.icon{
+  filter: invert(50%);
+}
+
+.effect:hover .icon{
+  filter: invert(0%);
+}
+
+.effect:hover .scr{
+  color: #ffffff;
+}
+
+.effect:active{
+  border-left: 2px solid greenyellow;
+}
+
+.scr:hover{
+  color: #ffffff;
+}
+
 .aside h3{
   color: lightgray;
   font-size: 1.2rem;
   margin-bottom: 15px;
   cursor: pointer;
+}
+
+.aside h3:hover{
+  color: #ffffff;
 
 }
+
+.center:hover .piu,span {
+  color: #ffffff;
+}
+
+.center .piu{
+  font-size: 2.3rem;
+  color: darkgray;
+}
+
 
 .plus{
-  margin-bottom: 50px;
+  height: calc(100vh - 440px);
+  overflow-y: auto;
+  margin-top: 10px;
 }
+
+.plus li:hover{
+  color: #ffffff;
+}
+
 
 .plus i{
   font-size: 30px;
@@ -87,12 +140,14 @@ main{
 
 }
 
-.plus p{
-  margin-bottom: 8px;
+.plus li{
+  margin-bottom: 10px;
   color: lightgray;
   font-size: 0.9rem;
   cursor: pointer;
 }
+
+
 
 .end{
   border-bottom: 1px solid #ffffff;
@@ -101,18 +156,38 @@ main{
 
 }
 
+.end i{
+  font-size: 19px;
+}
+
+.end:hover i{
+  color: white;
+}
+.end:hover span{
+  color: white;
+}
+
+.after-end:hover i{
+  color: white;
+}
+
+.after-end:hover span{
+  color: white;
+}
+
 .user{
   font-size: 23px;
-  color: #ffff;
+  color: lightgray;
 }
 
 .after-end{
-  font-size: 23px;
-  color: #ffff;
+  font-size: 13px;
+  color: lightgray;
+  margin-bottom: 10px;
 }
 
 .after-end span,i{
-font-size: 21px;
+font-size: 16px;
 color: lightgray;
 cursor: pointer;
 }
@@ -140,6 +215,11 @@ header a{
   border-radius: 30px;
   border: 1px solid #ffffff;
   margin-right: 20px;
+}
+
+header a:hover{
+  font-size: 1.1rem;
+  padding: 11px 31px;
 }
 
 /* FINE HEADER  */
@@ -188,8 +268,7 @@ header a{
 /* FINE NAV BAR  */
 
 .items{
-  margin-top: 10px;
-  margin-left: 10px
+  margin-left: 10px;
 }
 
 .items h2{
@@ -214,6 +293,7 @@ header a{
   flex-direction: column;
   text-align: center;
   margin-bottom: 20px;
+  cursor: pointer;
 
 }
 
@@ -223,7 +303,41 @@ header a{
 color: #ffffff;
 }
 
-.box img{width: 100%}
+.box{
+  width: 100%;
+  position: relative;
+}
+
+.box img{
+  width: 100%;
+}
+
+.play{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0%; 
+  left: 0%;
+  transition: all 1s;
+}
+
+.play i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 2rem;
+}
+
+.play{
+  display: none;
+}
+
+.co-img:hover .play{
+  display: block;
+}
+
 
 
 
@@ -248,6 +362,10 @@ color: #ffffff;
   border-radius: 50%;
 }
 
+.circles .circle .play{
+  border-radius: 50%;
+}
+
 /* FINE DISCHI  */
 
 
@@ -256,8 +374,6 @@ footer{
   height: 90px;
   background-color: #282828;
 }
-
-
 
 
 /* ***************************************************/
@@ -276,18 +392,15 @@ footer{
   }
 
   .in-nav{
-    height: 100px;
+    height: 50px;
     display: flex;
     flex-wrap: wrap;
     
   }
- .play-scroll{
-    margin-bottom: 130px;
-    
-  }
+ 
 
   .content{
-    height: 530px;
+     height: calc(100vh - 180px );
     overflow-y: auto;
   }
 
@@ -299,8 +412,6 @@ footer{
 
 @media screen and (max-width: 600px){
 
- 
-
   header a{
     padding: 10px 25px; 
     text-align: center;
@@ -309,12 +420,11 @@ footer{
 
   .content{
    width: calc(100% - 50px);
-
   }
   
+
   .aside{
     width: 50px;
-    padding: 0;
     display: flex;
     text-align: center;
   }
@@ -333,28 +443,44 @@ footer{
     display: none;
   }
 
+  .effect:active{
+    border-left: 1px solid transparent;
+  }
+
+  .aside i{
+    display: none;
+  }
+
   .none {
     display: none;
   }
 
-  .end{
+  .aside .end i{
+    display: block;
+    font-size: 22px;
+  }
+
+   .end{
     border-bottom: black;
-    margin-top: 370px;
-    margin-bottom: 10px;
+    display: block;
   }
 
   .after-end i{
     font-size: 22px;
+    display: block;
+    margin-top: 5px;
   }
-    
 
   .plus{display: none;}
+
+  .down{
+    margin-bottom: 10px;
+  }
 
    .block{
     display: inline-block;
     width: 70%;
     padding-top: 10px;
-    margin-bottom: 20px;
     }
  
    .co-img{
