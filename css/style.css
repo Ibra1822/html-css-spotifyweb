@@ -13,6 +13,10 @@ body{
   border: 1px solid white;
 }
 
+h1,h2,h3,h4,h5,h6{
+  font-weight:bold;
+}
+
 /* FINE ASIDE  */
 main{
   width: 100vw;
@@ -56,6 +60,7 @@ main{
   color: lightgray;
   font-size: 0.8rem;
   cursor: pointer;
+  
 
 }
 .effect a{
@@ -107,7 +112,7 @@ main{
 }
 
 .after-end span,i{
-font-size: 0.8rem;
+font-size: 21px;
 color: lightgray;
 cursor: pointer;
 }
@@ -149,7 +154,7 @@ header a{
 .content{
   margin-top: 90px;
   width: calc(100% - 230px);
-  height: 540px;
+  height: calc(100vh - 180px );
   padding: 10px;
   overflow-y: auto;
 
@@ -201,8 +206,8 @@ header a{
 }
 
 .co-img{
-  width:calc(100% / 6 - 10px);
-  margin: 10px 5px;
+  width:calc(100% / 6 );
+  padding: 5px;
   aspect-ratio: 1/1;
   min-width: 125px;
   display: flex;
@@ -250,7 +255,6 @@ footer{
   width: 100%;
   height: 90px;
   background-color: #282828;
-  z-index: 999;
 }
 
 
@@ -272,7 +276,6 @@ footer{
   }
 
   .in-nav{
-    border: 1px solid white;
     height: 100px;
     display: flex;
     flex-wrap: wrap;
@@ -280,6 +283,7 @@ footer{
   }
  .play-scroll{
     margin-bottom: 130px;
+    
   }
 
   .content{
@@ -338,6 +342,10 @@ footer{
     margin-top: 370px;
     margin-bottom: 10px;
   }
+
+  .after-end i{
+    font-size: 22px;
+  }
     
 
   .plus{display: none;}
@@ -350,8 +358,8 @@ footer{
     }
  
    .co-img{
-      width:calc(100% / 2 - 10px);
-      margin: 5px;
+      width:calc(100% / 2);
+      padding: 5px;
       margin-bottom: 35px;
 }
 }
