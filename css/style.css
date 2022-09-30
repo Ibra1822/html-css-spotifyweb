@@ -205,14 +205,14 @@ cursor: pointer;
 header{
   width: calc(100% - 230px);
   height: 90px;
-  background-color:rgba(8, 10, 18, 0.1);
+  background-color:rgba(0, 0,0, 0.2);
   position: fixed;
   right: 0;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  
+  z-index: 999;
 
 }
 
@@ -221,10 +221,11 @@ header a{
   padding: 10px 30px;
   color: #ffffff;
   text-decoration: none;
-  background-color: rgba(8, 10, 18, 0.1);
+  background-color: rgba(8, 10, 18, 0.5);
   border-radius: 30px;
   border: 1px solid #ffffff;
   margin-right: 20px;
+  z-index: 999;
 }
 
 header a:hover{
@@ -239,20 +240,21 @@ header a:hover{
 .container{
   display: flex;
   flex-wrap: wrap;
+  z-index: 1;
 
 }
 
 
 .content{
-  margin-top: 90px;
   width: calc(100% - 230px);
-  height: calc(100vh - 180px );
+  height: calc(100vh - 90px );
   padding: 10px;
   overflow-y: auto;
 
 }
 
 .in-nav{
+    margin-top: 90px;
   height: 75px;
   width: 100%;
   display: flex;
@@ -294,9 +296,7 @@ header a:hover{
 }
 /* FINE NAV BAR  */
 
-.items{
-  margin-left: 10px;
-}
+
 
 .items h2{
   margin-top: 20px;
@@ -637,6 +637,7 @@ color: #ffffff;
 
   .items{
     margin-top: 20px;
+    
   }
 
   footer{
@@ -669,8 +670,12 @@ color: #ffffff;
 
 @media screen and (max-width: 600px){
 
+  header{
+    width: calc(100% - 50px);
+    height: 90px;}
+
   header a{
-    padding: 5px 10px; 
+    padding: 7px 14px; 
     text-align: center;
     font-size: 0.7rem;
   }
